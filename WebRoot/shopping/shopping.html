@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Feigle客家特产</title>
+<link rel="stylesheet" href="../../dist/debug/minirefresh.css" />
+        <link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="../css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/minirefresh.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script>
+			$(function(){
+				var appendTestData = Common.appendTestData,
+                // 记录一个最新
+                maxDataSize = 30,
+                listDom = document.querySelector('#listdata'),
+                requestDelayTime = 600;
+
+            var miniRefresh = new MiniRefresh({
+                container: '#minirefresh',
+                down: {
+                    callback: function() {
+                        setTimeout(function() {
+                            // 每次下拉刷新后，上拉的状态会被自动重置
+                            appendTestData(listDom, 10, true);
+                            miniRefresh.endDownLoading(true);
+                        }, requestDelayTime);
+                    }
+                },
+                up: {
+                    isAuto: true,
+                    callback: function() {
+                        setTimeout(function() {
+                            appendTestData(listDom, 10);
+                            miniRefresh.endUpLoading(listDom.children.length >= maxDataSize ? true : false);
+                        }, requestDelayTime);
+                    }
+                }
+            });
+			})
+            
+            
+        </script>
+</head>
+
+<body style="padding-top: 70px">
+<nav class="navbar-header">
+            最基础的新闻列表
+        </nav>
+        <div class="content">
+            <div id="minirefresh" class="minirefresh-wrap">
+
+                <div class="minirefresh-scroll">
+
+                    <ul class="data-list1" id="listdata1">
+
+                    </ul>
+                </div>
+            </div>
+			<div class="list-item"><div class="row"><div class="col-xs-1"><input type="checkbox"></div><div class="col-xs-3"><img src="../img/loading2.png" width="120" height="120" alt=""/></div><div class="col-xs-5"><p>{{commodity}}</p><p>{{inventory}}</p><p>{{price}}</p></div><div class="col-xs-3"><input type="button" value="加入购物车"><br><input type="button" value="立即购买"></div></div></div>
+        </div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+		<ul class="nav nav-tabs">
+		  <li role="presentation"><a href="home2.html">主页</a></li>
+		  <li role="presentation" class="active"><a href="#">购物车</a></li>
+		  <li role="presentation"><a href="my.html">我的</a></li>
+  </ul>
+	</nav>
+</body>
+</html>

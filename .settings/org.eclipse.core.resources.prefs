@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//WebRoot/banner.jsp=UTF-8
+encoding//WebRoot/check_login.jsp=UTF-8
+encoding//WebRoot/frame_header.jsp=UTF-8
+encoding//WebRoot/index.jsp=UTF-8
+encoding//src/com/feigle/wx/IWXPayDomain.java=UTF-8
+encoding//src/com/feigle/wx/MyConfig.java=UTF-8
+encoding//src/com/feigle/wx/WXPay.java=UTF-8
+encoding//src/com/feigle/wx/WXPayConfig.java=UTF-8
+encoding//src/com/feigle/wx/WXPayConstants.java=UTF-8
+encoding//src/com/feigle/wx/WXPayReport.java=UTF-8
+encoding//src/com/feigle/wx/WXPayRequest.java=UTF-8
+encoding//src/com/feigle/wx/WXPayUtil.java=UTF-8

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="title" content="可视化设计工具" />
+<meta name="description"
+	content="DIY官网做好的拖拽式可视化设计工具，提供最微信小程序设计、Bootstrap页面设计、单页动画设计、WebApp可视化设计、代码生成器及导出工具" />
+<meta name="keywords"
+	content="DIY官网,diygw.com,做好的拖拽式可视化设计工具,微信小程序设计工具,微信小程序可视化设计工具,可视化代码生成器" />
+<title>login-DIY官网专注做拖拽式可视化微信小程序、Bootstrap、单页动画、Html5
+	WebApp设计工具&lt;/a&gt;</title>
+<meta name="author" content="DIY官网 http://www.diygw.com" />
+<link rel="stylesheet" href="./static/lib/diygw-mobile-all.min.css" />
+<script charset="utf-8" type="text/javascript"
+	src="./static/lib/underscore.js"></script>
+<script charset="utf-8" type="text/javascript">
+	_.templateSettings = {
+		interpolate : /[\$\{]\{(.+?)\}\}?/g,
+		evaluate : /<%([\s\S]+?)%>/g
+	};
+	window.GlobalConfig = {
+		loginUrl : '/xcx/login/login.html',
+		registerUrl : '/xcx/login/register.html',
+		loginCheckUrl : '/xcx/login/loginCheck.html'
+	};
+	window.STATIC_URL = "";
+	window.UEDITOR_SERVER_URL = "/ueditor/index";
+</script>
+<script charset="utf-8" type="text/javascript"
+	src="./static/lib/diygw-mobile-all.min.js"></script>
+<script charset="utf-8" type="text/javascript"
+	src="http://localhost:8088/FeigleShopping/mobile/static/lib/diygw-mobile-all.min.js"></script>
+<script type="text/javascript">
+	var url = "http://localhost:8088/FeigleShopping/";
+	function login() {
+		$.post(url + "loginForMobileServerlet",
+			{
+				name : $("#name").val(),
+				psw : $("#psw").val()
+			},
+			function(data, status) {
+				if (data === "true")
+					window.location.href = url+"mobile/me.html";
+				else
+					alert("用户名或密码不正确");
+			});
+	}
+</script>
+<style type="text/css">
+.top {
+	display: none
+}
+
+.page {
+	top: 0;
+}
+</style>
+</head>
+<body data-ride="animatebox" style="background-color:#ffffff;"
+	data-mpid="22200" data-homepage="" data-dashboardid="22200"
+	data-page_id="35756" data-page_name="loginpage">
+	<div class="container">
+		<div class="top">
+			<h1 class="page__title" style="background-color:#479de6">
+				login<span id="PageBack" class="back">返回</span><a
+					class="home fa fa-home ajax-page" id="home" href=".html"></a>
+			</h1>
+		</div>
+		<div class="page" id="page"
+			style="background-color:#ffffff;margin-bottom:20px;">
+			<div class="pagebg"></div>
+			<div class="pagemain">
+				<div class="table-green">
+					<table>
+						<tbody>
+							<tr class="firstRow">
+								<td width="35" valign="top"><img
+									src="http://lib.diygw.com/upload/18023/image/20191105/back.png"
+									title="back.png" alt="back.png"
+									onclick="javascript:window.history.back()" /></td>
+								<td width="455" valign="top" style="word-break: break-all;">登录</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>
+						<br />
+					</p>
+				</div>
+				<form class="form-horizontal ui-sortable formtable_330766"
+					data-bv-group=".weui-cell" data-bv-container="#errorsform330766"
+					data-bv-feedbackicons-valid="weui-icon-success"
+					data-bv-feedbackicons-invalid="weui-icon-warn"
+					data-bv-feedbackicons-validating="weui-icon-warn">
+					<div class="row-form clearfix">
+						<div class="">
+							<div class="weui-cell">
+								<div class="weui-cell__bd">
+									<input type="text" placeholder="请输入用户名" value="" name="name"
+										id="name" class="weui-input" required=""
+										data-bv-notempty-message="不能为空哟" />
+								</div>
+							</div>
+							<div class="weui-cell">
+								<div class="weui-cell__bd">
+									<input type="password" placeholder="请输入密码" value="" name="psw"
+										id="psw" class="weui-input" required=""
+										data-bv-notempty-message="不能为空哟" />
+								</div>
+							</div>
+							<div class="weui-form">
+								<div class="weui-form-item">
+									<input type="button" class="weui-btn weui-btn_primary" onclick="login()" value="登录"/>
+								</div>
+							</div>
+							<div class="weui-form">
+								<div class="weui-form-item">
+									<a data-index="1924410" href="register.html"
+										class="weui-btn weui-btn_primary  ">注册</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<input type="hidden" class="hide" name="dashboardId" value="22200" />
+					<input type="hidden" class="hide" name="formId" value="330766" />
+					<input type="hidden" class="hide" name="tableName"
+						value="table_330766" /> <input type="hidden" class="hide"
+						name="id" value="" />
+					<div id="errorsform330766" class="hide"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

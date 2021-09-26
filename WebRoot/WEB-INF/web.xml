@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>FeigleShopping</display-name>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>LoginServerlet</servlet-name>
+		<servlet-class>com.feigle.serverlet.LoginServerlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServerlet</servlet-name>
+		<url-pattern>/loginServerlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserListServerlet</servlet-name>
+		<servlet-class>com.feigle.serverlet.user.UserListServerlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserListServerlet</servlet-name>
+		<url-pattern>/userListServerlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteUserServerlet</servlet-name>
+		<servlet-class>com.feigle.serverlet.user.DeleteUserServerlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteUserServerlet</servlet-name>
+		<url-pattern>/deleteUserServerlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UpdateUserServerlet</servlet-name>
+		<servlet-class>com.feigle.serverlet.user.UpdateUserServerlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateUserServerlet</servlet-name>
+		<url-pattern>/updateUserServerlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AddUserServerlet</servlet-name>
+		<servlet-class>com.feigle.serverlet.user.AddUserServerlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddUserServerlet</servlet-name>
+		<url-pattern>/addUserServerlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>CommodityListServerlet</servlet-name>
+		<servlet-class>com.feigle.serverlet.commodity.CommodityListServerlet</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>AddCommodityServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.commodity.AddCommodityServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteCommodityServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.commodity.DeleteCommodityServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateCommodityServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.commodity.UpdateCommodityServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetCommodityByIdServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.commodity.GetCommodityByIdServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderListServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.order.OrderListServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOrderByIdServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.order.GetOrderByIdServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateOrderServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.order.UpdateOrderServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddOrderServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.order.AddOrderServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetCommodityForWXServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.commodity.GetCommodityForWXServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginForWXServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.LoginForWXServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOrderByUserForWXServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.order.GetOrderByUserForWXServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderQueryServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.order.OrderQueryServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BannerImageListServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.banner.BannerImageListServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BannerDeleteServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.banner.BannerDeleteServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BannerUploadServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.banner.BannerUploadServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BannerImageListForWXServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.banner.BannerImageListForWXServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShoppingAddServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.shopping.ShoppingAddServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShoppingListServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.shopping.ShoppingListServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetCommodityByIdForWXServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.commodity.GetCommodityByIdForWXServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddOrderForWXServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.order.AddOrderForWXServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>WXPayServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.wx.WXPayServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginForAPPServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.LoginForAPPServerlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>CommodityListServerlet</servlet-name>
+		<url-pattern>/commodityListServerlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCommodityServerlet</servlet-name>
+    <url-pattern>/addCommodityServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCommodityServerlet</servlet-name>
+    <url-pattern>/deleteCommodityServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCommodityServerlet</servlet-name>
+    <url-pattern>/updateCommodityServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCommodityByIdServerlet</servlet-name>
+    <url-pattern>/getCommodityByIdServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderListServerlet</servlet-name>
+    <url-pattern>/orderListServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOrderByIdServerlet</servlet-name>
+    <url-pattern>/getOrderByIdServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateOrderServerlet</servlet-name>
+    <url-pattern>/updateOrderServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrderServerlet</servlet-name>
+    <url-pattern>/addOrderServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCommodityForWXServerlet</servlet-name>
+    <url-pattern>/getCommodityForWXServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginForWXServerlet</servlet-name>
+    <url-pattern>/loginForWXServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOrderByUserForWXServerlet</servlet-name>
+    <url-pattern>/getOrderByUserForWXServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderQueryServerlet</servlet-name>
+    <url-pattern>/orderQueryServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BannerImageListServerlet</servlet-name>
+    <url-pattern>/bannerImageListServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BannerDeleteServerlet</servlet-name>
+    <url-pattern>/bannerDeleteServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BannerUploadServerlet</servlet-name>
+    <url-pattern>/bannerUploadServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BannerImageListForWXServerlet</servlet-name>
+    <url-pattern>/bannerImageListForWXServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShoppingAddServerlet</servlet-name>
+    <url-pattern>/shoppingAddServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShoppingListServerlet</servlet-name>
+    <url-pattern>/shoppingListServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCommodityByIdForWXServerlet</servlet-name>
+    <url-pattern>/getCommodityByIdForWXServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrderForWXServerlet</servlet-name>
+    <url-pattern>/addOrderForWXServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WXPayServerlet</servlet-name>
+    <url-pattern>/WXPayServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginForAPPServerlet</servlet-name>
+    <url-pattern>/loginForAPPServerlet</url-pattern>
+  </servlet-mapping>
+    <servlet>
+        <servlet-name>ShoppingAddForAPPServerlet</servlet-name>
+        <servlet-class>com.feigle.serverlet.shopping.ShoppingAddForAPPServerlet</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>ShoppingListForAPPServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.shopping.ShoppingListForAPPServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetCommodityByIdForAPPServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.commodity.GetCommodityByIdForAPPServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddAddressServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.address.AddAddressServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAddressListServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.address.GetAddressListServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.user.RegisterServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateAddressServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.address.UpdateAddressServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetDefAddressServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.address.GetDefAddressServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddOrderForAPPServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.order.AddOrderForAPPServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddTransportServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.transport.AddTransportServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TransportListServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.transport.TransportListServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteTransportServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.transport.DeleteTransportServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetTransportByIdServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.transport.GetTransportByIdServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateTransportByIdServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.transport.UpdateTransportByIdServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetTransportByEnableServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.transport.GetTransportByEnableServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetOrderByUserForAPPServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.order.GetOrderByUserForAPPServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteShoppingServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.shopping.DeleteShoppingServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdatePswServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.user.UpdatePswServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdatePhoneServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.user.UpdatePhoneServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewVersionServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.app.NewVersionServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.app.UploadServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>APPListServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.app.APPListServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.app.DeleteServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IsNewUserServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.user.IsNewUserServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetNewAppServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.app.GetNewAppServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowBannerAndCommodityServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.mobile.index.ShowBannerAndCommodityServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShoppingCartAddForMobileServlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.mobile.shoppingcart.ShoppingCartAddForMobileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginForMobileServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.LoginForMobileServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterForMobileServerlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.mobile.user.RegisterForMobileServerlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowMeForMobileServlet</servlet-name>
+    <servlet-class>com.feigle.serverlet.mobile.me.ShowMeForMobileServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>ShoppingAddForAPPServerlet</servlet-name>
+        <url-pattern>/shoppingAddForAPPServerlet</url-pattern>
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShoppingListForAPPServerlet</servlet-name>
+    <url-pattern>/shoppingListForAPPServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCommodityByIdForAPPServerlet</servlet-name>
+    <url-pattern>/getCommodityByIdForAPPServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddAddressServerlet</servlet-name>
+    <url-pattern>/addAddressServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAddressListServerlet</servlet-name>
+    <url-pattern>/getAddressListServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServerlet</servlet-name>
+    <url-pattern>/registerServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateAddressServerlet</servlet-name>
+    <url-pattern>/updateAddressServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetDefAddressServerlet</servlet-name>
+    <url-pattern>/getDefAddressServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrderForAPPServerlet</servlet-name>
+    <url-pattern>/addOrderForAPPServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddTransportServerlet</servlet-name>
+    <url-pattern>/addTransportServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransportListServerlet</servlet-name>
+    <url-pattern>/transportListServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteTransportServerlet</servlet-name>
+    <url-pattern>/deleteTransportServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetTransportByIdServerlet</servlet-name>
+    <url-pattern>/getTransportByIdServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateTransportByIdServerlet</servlet-name>
+    <url-pattern>/updateTransportByIdServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetTransportByEnableServerlet</servlet-name>
+    <url-pattern>/getTransportByEnableServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOrderByUserForAPPServerlet</servlet-name>
+    <url-pattern>/getOrderByUserForAPPServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteShoppingServerlet</servlet-name>
+    <url-pattern>/deleteShoppingServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePswServerlet</servlet-name>
+    <url-pattern>/updatePswServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePhoneServerlet</servlet-name>
+    <url-pattern>/updatePhoneServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewVersionServerlet</servlet-name>
+    <url-pattern>/newVersionServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadServerlet</servlet-name>
+    <url-pattern>/uploadServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>APPListServerlet</servlet-name>
+    <url-pattern>/appListServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteServerlet</servlet-name>
+    <url-pattern>/deleteServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsNewUserServerlet</servlet-name>
+    <url-pattern>/isNewUserServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetNewAppServerlet</servlet-name>
+    <url-pattern>/getNewAppServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowBannerAndCommodityServerlet</servlet-name>
+    <url-pattern>/showBannerAndCommodityServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShoppingCartAddForMobileServlet</servlet-name>
+    <url-pattern>/shoppingCartAddForMobileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginForMobileServerlet</servlet-name>
+    <url-pattern>/loginForMobileServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterForMobileServerlet</servlet-name>
+    <url-pattern>/registerForMobileServerlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowMeForMobileServlet</servlet-name>
+    <url-pattern>/showMeForMobileServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
